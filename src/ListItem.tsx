@@ -35,16 +35,35 @@ export function RenderList({
       <div className="info">
         <h3 className="position">{position}</h3>
         <div className="role-level-contract">
-          <p>{"Role: " + role}</p>
-          <p>{"Level: " + level}</p>
-          <p>{"Contract: " + contract}</p>
+          <p>
+            <span>Role: </span> {role}
+          </p>
+          <p>
+            <span>Level: </span>
+            {level}
+          </p>
+          <p>
+            <span>Contract: </span>
+            {contract}
+          </p>
         </div>
         <div className="languages-tools">
-          <p>{"Languages: " + languages.join(", ")}</p>
-          <p>{"Tools: " + tools.join(", ")}</p>
+          <p>
+            <span>Languages: </span>
+            {languages.join(", ")}
+          </p>
+          <p>
+            <span>Tools: </span> {tools.join(", ")}
+          </p>
         </div>
-        <p className="location">{"Location: " + location}</p>
-        <p className="posted">{"Posted: " + postedAt}</p>
+        <p className="location">
+          <span>Location: </span>
+          {location}
+        </p>
+        <p className="posted">
+          <span>Posted: </span>
+          {postedAt}
+        </p>
       </div>
     </li>
   );

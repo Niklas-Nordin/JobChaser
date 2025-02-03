@@ -6,7 +6,12 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  /* border-radius: 10px; */
+  /* background: linear-gradient(
+    to top left,
+    rgb(174, 174, 211),
+    rgb(209, 175, 175)
+  );
+  box-shadow: 1px 1px 5px 0; */
 }
 
 .title-image {
@@ -24,10 +29,22 @@
 
 .company-name {
   font-size: 20pt;
+  font-weight: 700;
 }
 
 .logo {
   margin: 1rem;
+}
+
+.position {
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+span {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .posted {

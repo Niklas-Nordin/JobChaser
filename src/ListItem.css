@@ -47,8 +47,13 @@ span {
   font-style: normal;
 }
 
+.location-posted {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .posted {
-  margin-left: auto;
   color: rgba(0, 0, 0, 0.4);
 }
 

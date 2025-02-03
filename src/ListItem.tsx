@@ -56,6 +56,8 @@ export function RenderList({
             <span>Tools: </span> {tools.join(", ")}
           </p>
         </div>
+      </div>
+      <div className="location-posted">
         <p className="location">
           <span>Location: </span>
           {location}

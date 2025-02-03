@@ -1,3 +1,5 @@
+import "./ListItem.css";
+
 export type Jobs = {
   id: number;
   company: string;
@@ -26,12 +28,12 @@ export function RenderList({
 }: Jobs) {
   return (
     <li className="li-item">
-      <div className="company">
-        <h2>{company}</h2>
+      <div className="title-image">
+        <h2 className="company-name">{company}</h2>
         <img className="logo" src={logo} alt={company + " logo"} />
       </div>
-      <div className="right-section">
-        <p className="position">{"Position: " + position}</p>
+      <div className="info">
+        <h3 className="position">{position}</h3>
         <div className="role-level-contract">
           <p>{"Role: " + role}</p>
           <p>{"Level: " + level}</p>

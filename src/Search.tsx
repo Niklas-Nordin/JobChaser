@@ -1,11 +1,14 @@
 import { useState } from "react";
 import "./Search.css";
 import { jobs } from "./JobList.tsx";
-import { RenderList } from "./ListItem.tsx";
+import { Jobs } from "./ListItem";
 
-function SearchBar() {
+function SearchBar({
+  setFilteredJobs,
+}: {
+  setFilteredJobs: (jobs: Jobs[]) => void;
+}) {
   const [searchTerm, setSearchTerm] = useState<string>("");
-  // const [filteredJobs, setFilteredJobs] = useState(jobs);
 
   const HandleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -16,7 +19,7 @@ function SearchBar() {
     );
     console.log(filteredList);
 
-    // setFilteredJobs(filteredList);
+    setFilteredJobs(filteredList);
   };
 
   return (

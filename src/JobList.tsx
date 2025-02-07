@@ -1,4 +1,5 @@
 import { RenderList, Jobs } from "./ListItem";
+import SearchBar from "./Search";
 
 const jobs: Jobs[] = [
   {
@@ -135,29 +136,12 @@ const jobs: Jobs[] = [
 
 console.log(jobs);
 
-function JobList() {
+function JobList({ jobs }: { jobs: Jobs[] }) {
   return (
     <main className="main">
       <ul className="ul">
         {jobs.length > 0 ? (
-          jobs.map((job) => {
-            return (
-              <RenderList
-                key={job.id}
-                id={job.id}
-                company={job.company}
-                logo={job.logo}
-                position={job.position}
-                role={job.role}
-                level={job.level}
-                postedAt={job.postedAt}
-                contract={job.contract}
-                location={job.location}
-                languages={job.languages}
-                tools={job.tools}
-              />
-            );
-          })
+          jobs.map((job) => <RenderList key={job.id} {...job} />)
         ) : (
           <p>No jobs to be seen...</p>
         )}

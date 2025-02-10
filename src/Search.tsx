@@ -1,20 +1,21 @@
 import { useState } from "react";
 import "./Search.css";
-import { jobs } from "./JobList.tsx";
 import { Jobs } from "./ListItem";
 
 function SearchBar({
   setFilteredJobs,
+  jobList,
 }: {
-  setFilteredJobs: (jobs: Jobs[]) => void;
+  setFilteredJobs: (jobList: Jobs[]) => void;
+  jobList: Jobs[];
 }) {
   const [searchTerm, setSearchTerm] = useState<string>("");
 
-  const HandleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     console.log(`Du sökte på ${searchTerm}`);
 
-    const filteredList = jobs.filter((job) =>
+    const filteredList = jobList.filter((job: Jobs) =>
       job.company.toLowerCase().includes(searchTerm.toLowerCase())
     );
     console.log(filteredList);
@@ -24,7 +25,7 @@ function SearchBar({
 
   return (
     <>
-      <form className="form" onSubmit={HandleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <input
           className="search"
           type="text"
@@ -36,12 +37,6 @@ function SearchBar({
           Search
         </button>
       </form>
-
-      {/* <ul>
-        {filteredJobs.map((job) => (
-          <RenderList key={job.id} {...job} />
-        ))}
-      </ul> */}
     </>
   );
 }

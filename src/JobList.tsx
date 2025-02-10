@@ -1,3 +1,4 @@
+import "./JobList.css";
 import { RenderList, Jobs } from "./ListItem";
 
 function JobList({ jobList }: { jobList: Jobs[] }) {
@@ -7,7 +8,9 @@ function JobList({ jobList }: { jobList: Jobs[] }) {
         {jobList.length > 0 ? (
           jobList.map((job) => <RenderList key={job.id} {...job} />)
         ) : (
-          <p>No jobs to be seen...</p>
+          <li className="li-no-jobs">
+            <p className="no-jobs">No jobs to be seen...</p>
+          </li>
         )}
       </ul>
     </main>

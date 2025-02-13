@@ -29,12 +29,33 @@ button {
   flex: 1;
 }
 
+.landing-page-main {
+  font-size: x-large;
+}
+
 .looking-for-job {
   margin: 8rem 0 0 10rem;
+  background-color: #3498db;
 }
 
 .dive-in {
   margin: 1rem 0 0 15rem;
+  background-color: #8fb9d4;
+  transform: skewX(20deg);
+}
+
+.signin-text {
+  margin: 3rem 0 0 15rem;
+  background-color: #3498db;
+  transform: skewX(20deg);
+}
+
+.question {
+  margin: 1rem 0 0 20rem;
+}
+
+.signup-text {
+  margin: 1rem 0 0 18rem;
 }
 
 .footer {

@@ -19,26 +19,22 @@ body {
   padding-bottom: 2rem;
 }
 
+button {
+  background-color: rgb(202, 202, 202);
+}
+
 .main {
   width: 90%;
   margin: auto;
   flex: 1;
 }
 
-.header {
-  display: flex;
-  align-items: center;
+.looking-for-job {
+  margin: 8rem 0 0 10rem;
 }
 
-.navbar {
-  display: flex;
-  gap: 1rem;
-}
-
-.h1 {
-  font-size: 40pt;
-  text-align: start;
-  margin: 3rem;
+.dive-in {
+  margin: 1rem 0 0 15rem;
 }
 
 .footer {

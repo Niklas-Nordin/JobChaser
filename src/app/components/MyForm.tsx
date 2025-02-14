@@ -1,16 +1,9 @@
 "use client";
+import "../css/myForm.css";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Span } from "next/dist/trace";
-
-// type FormInput = {
-//   name: string;
-//   email: string;
-//   username: string;
-//   password: string;
-//   confirmPassword: string;
-// };
+import { usePathname } from "next/navigation";
 
 function MyForm() {
   const formSchema = z
@@ -39,24 +32,50 @@ function MyForm() {
     reset();
   };
 
+  const pathname = usePathname();
+  const isSignUp = pathname === "/SignUp";
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label>Name:</label>
-      <input type="text" {...register("name")} />
-      {errors.name && <span>{errors.name.message}</span>}
-      <label>Email:</label>
-      <input type="text" {...register("email")} />
-      {errors.email && <span>{errors.email.message}</span>}
+    <form className="form" onSubmit={handleSubmit(onSubmit)}>
+      {isSignUp && (
+        <>
+          <label>Name:</label>
+          <input className="input" type="text" {...register("name")} />
+          {errors.name && (
+            <span className="error-msg">{errors.name.message}</span>
+          )}
+
+          <label>Email:</label>
+          <input className="input" type="text" {...register("email")} />
+          {errors.email && (
+            <span className="error-msg">{errors.email.message}</span>
+          )}
+        </>
+      )}
       <label>Username:</label>
-      <input type="text" {...register("username")} />
-      {errors.username && <span>{errors.username.message}</span>}
+      <input className="input" type="text" {...register("username")} />
+      {errors.username && (
+        <span className="error-msg">{errors.username.message}</span>
+      )}
       <label>Password:</label>
-      <input type="password" {...register("password")} />
-      {errors.password && <span>{errors.password.message}</span>}
-      <label>Confirm Password:</label>
-      <input type="password" {...register("confirmPassword")} />
-      {errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
-      <button>Register</button>
+      <input className="input" type="password" {...register("password")} />
+      {errors.password && (
+        <span className="error-msg">{errors.password.message}</span>
+      )}
+      {isSignUp && (
+        <>
+          <label>Confirm Password:</label>
+          <input
+            className="input"
+            type="password"
+            {...register("confirmPassword")}
+          />
+          {errors.confirmPassword && (
+            <span className="error-msg">{errors.confirmPassword.message}</span>
+          )}
+        </>
+      )}
+      <button className="form-btn">{isSignUp ? "Sign Up" : "Sign In"}</button>
     </form>
   );
 }

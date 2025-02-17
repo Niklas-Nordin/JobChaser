@@ -5,6 +5,8 @@ import "./globals.css";
 import Fonts from "./components/Fonts";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { DarkLightProvider } from "./contexts/DarkLightContext";
+import ThemeSwitcher from "./components/DarkLightSwitcher";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,9 +24,11 @@ export default function RootLayout({
         <Fonts />
       </head>
       <body>
-        <Header />
-        <main className="main">{children}</main>
-        <Footer />
+        <DarkLightProvider>
+          <Header />
+          <main className="main">{children}</main>
+          <Footer />
+        </DarkLightProvider>
       </body>
     </html>
   );

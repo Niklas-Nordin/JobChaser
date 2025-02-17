@@ -11,6 +11,7 @@
 .navbar {
   align-items: center;
   display: flex;
+  gap: 1rem;
 }
 
 .h1 {
@@ -19,7 +20,7 @@
 }
 
 .stick {
-  padding: 0 2rem;
+  padding: 0 1rem;
   font-size: 16pt;
   font-weight: 400;
 }
@@ -50,11 +51,7 @@
 .line7 {
   height: 0.2rem;
   margin-bottom: 0.2rem;
-  background: linear-gradient(
-    to right,
-    rgb(59, 59, 160),
-    rgba(255, 0, 0, 0.342)
-  );
+  background: linear-gradient(to right, rgb(172, 172, 240), rgb(143, 128, 128));
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
 }

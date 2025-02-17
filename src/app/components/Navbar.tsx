@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import ThemeSwitcher from "./DarkLightSwitcher";
 
 function Navbar() {
   return (
@@ -21,6 +22,7 @@ function Navbar() {
           <p className="sign-up">Sign Up</p>
         </Link>
       </div>
+      <ThemeSwitcher />
     </div>
   );
 }

@@ -73,13 +73,6 @@ button {
   background-color: rgb(202, 202, 202);
 }
 
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-}
-
 .main {
   width: 90%;
   margin: 5rem auto;
@@ -94,6 +87,19 @@ button {
   font-size: x-large;
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.btns {
+  gap: 6rem;
+  font-size: xx-large;
+  width: 10rem;
+  text-align: center;
+}
+
 .looking-for-job {
   text-align: center;
   padding: 0.5rem;
@@ -104,6 +110,11 @@ button {
   text-align: center;
   padding: 0.5rem;
   font-size: 32pt;
+}
+
+.or {
+  text-align: center;
+  font-size: 36;
 }
 
 .footer {

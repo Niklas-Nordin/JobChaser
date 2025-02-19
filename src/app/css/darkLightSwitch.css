@@ -45,5 +45,14 @@
       rgb(180, 179, 179),
       rgba(184, 184, 184, 0.397)
     );
+    box-shadow: 0 0 0;
+  }
+
+  .li-item {
+    border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+  }
+
+  .posted {
+    color: rgba(255, 255, 255, 0.3);
   }
 }

@@ -55,4 +55,26 @@
   .posted {
     color: rgba(255, 255, 255, 0.3);
   }
+
+  .search,
+  .input-field {
+    background-color: rgb(255, 255, 255, 0.2);
+  }
+
+  .search::placeholder {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .search-button {
+    background-color: rgb(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .dropdown-menu {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .option {
+    background-color: rgb(119, 119, 119);
+  }
 }

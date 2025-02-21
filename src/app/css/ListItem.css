@@ -57,6 +57,12 @@ span {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.no-jobs {
+  text-align: center;
+  margin-top: 7rem;
+  font-size: 16pt;
+}
+
 /* .title-image {
   width: 20%;
   display: flex;

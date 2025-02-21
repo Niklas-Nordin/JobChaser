@@ -18,14 +18,3 @@ export function DarkLightProvider({ children }: { children: React.ReactNode }) {
     </ThemeContext.Provider>
   );
 }
-// function DarkLightMode({ children }) {
-//   const [darkLight, setDarkLight] = useState("light");
-
-//   const toggleTheme = () => {
-//     setDarkLight(darkLight === "light" ? "dark" : "light");
-//   };
-
-//   return (
-//     <ThemeContext.Provider value={darkLight}>{children}</ThemeContext.Provider>
-//   );
-// }

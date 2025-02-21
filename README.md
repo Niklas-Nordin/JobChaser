@@ -11,10 +11,19 @@ Centralt i React:
 - State och props
 
 Vad är JSX?
-JSX står för Javascript XML. Det gör det lättare att skriva och lägga till HTML kod i React.
+
+Svar:
+JSX står för Javascript XML. Det är ett Javascript syntax. Det låter en blanda Javascript kod och liknande HTML kod tillsammans i React, vilket ger en bättre struktur i koden.
 
 Vad är en komponent?
+
+Svar:
+En komponent kan man säga i jämförelse, är en funktion. En komponent är en del av UI:et på hemsidan och är återanvändbar i sin applikation. Med flera delar (komponenter) bygger man upp en större applikation. Man kan säga att det är som mindre byggstenar.
+
 Vad är props?
+Svar:
+Props är data som skickas från en komponent till en annan, så man kan återanvända funktionaliteterna i de olika komponenterna.
+
 Vad menas med one-way-dataflow?
 Hur kan man använda sig av konditionell rendering i React?
 Vad menas med en återanvändbar komponent?

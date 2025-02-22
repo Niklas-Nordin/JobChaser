@@ -75,7 +75,9 @@ function MyForm() {
           )}
         </>
       )}
-      <button className="form-btn">{isSignUp ? "Sign Up" : "Sign In"}</button>
+      <button className="form-btn sign-in">
+        {isSignUp ? "Sign Up" : "Sign In"}
+      </button>
     </form>
   );
 }

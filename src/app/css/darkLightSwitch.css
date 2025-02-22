@@ -77,4 +77,8 @@
   .option {
     background-color: rgb(119, 119, 119);
   }
+
+  .input {
+    background-color: rgb(255, 255, 255, 0.2);
+  }
 }

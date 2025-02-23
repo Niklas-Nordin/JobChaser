@@ -20,7 +20,6 @@ function FilterSelector({ jobList }: { jobList: Jobs[] }) {
   const companies = [...new Set(jobList.map((job) => job.company))];
   const roles = [...new Set(jobList.map((job) => job.role))];
   const contracts = [...new Set(jobList.map((job) => job.contract))];
-  const languages = [...new Set(jobList.map((job) => job.languages))];
   const locations = [...new Set(jobList.map((job) => job.location))];
 
   const filterJobs = jobList.filter((jobs) => {
@@ -28,9 +27,6 @@ function FilterSelector({ jobList }: { jobList: Jobs[] }) {
       (filterState.company ? jobs.company === filterState.company : true) &&
       (filterState.role ? jobs.role === filterState.role : true) &&
       (filterState.contract ? jobs.contract === filterState.contract : true) &&
-      (filterState.languages
-        ? jobs.languages === filterState.languages.split("")
-        : true) &&
       (filterState.location ? jobs.location === filterState.location : true) &&
       (filterState.searchTerm
         ? jobs.company
@@ -40,10 +36,6 @@ function FilterSelector({ jobList }: { jobList: Jobs[] }) {
             .toLowerCase()
             .includes(filterState.searchTerm.toLowerCase()) ||
           jobs.contract
-            .toLowerCase()
-            .includes(filterState.searchTerm.toLowerCase()) ||
-          jobs.languages
-            .toString()
             .toLowerCase()
             .includes(filterState.searchTerm.toLowerCase()) ||
           jobs.location
@@ -108,24 +100,6 @@ function FilterSelector({ jobList }: { jobList: Jobs[] }) {
             {contracts.map((contract, index) => (
               <option className="option" key={index} value={contract}>
                 {contract}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="dropdown-menu">
-          <label htmlFor="languages">Languages</label>
-          <select
-            id="languages"
-            value={filterState.languages}
-            onChange={(e) => dispatch(updateLanguages(e.target.value))}
-            className="input-field w-full"
-          >
-            <option className="option" value="">
-              All
-            </option>
-            {languages.map((language, index) => (
-              <option className="option" key={index} value={language}>
-                {language}
               </option>
             ))}
           </select>

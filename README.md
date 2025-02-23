@@ -63,16 +63,62 @@ Svar:
 Det menas med att man lyfter upp statet högre upp i komponent-trädet så att flera barnkomponenter kan ta del av statet. Det finns tillfällen där flera komponenter behöver ta del av statet, då gör man detta.
 
 Vad är syftet med useEffect-hook i React?
+Svar:
+Syftet är att kunna strukturera och kontrollera som kallat sidoeffekter, i ens komponenter. Exempel på dessa sidoeffekter kan vara API anrop, updatera DOM:en och timers. Med UseEffect hjälper den till att hålla komponentens logik ren och lättförståelig och man undviker onödiga uppdateringar, som kan leda till buggar.
+
 Vad är syftet kring den s.k dependency-arrayen i useEffect?
+Svar:
+Syftet med den är att kontrollera när effekten ska köras så att man förhindrar onödiga uppdateringar. Man kan t.ex. bestämma om den ska köras vid första renderingen, eller om den ska köras så fort ett värde har ändrats.
 
 --------Vecka 3...
 
 Vilka fördelar finns det med att använda NextJS? Nackdelar?
+Svar:
+Som vanligt finns det både för- och nackdelar med allt och nedan är några exempel på dessa om Next.js.
+
+Fördelar:
+
+- Server-Side Rendering (SSR) och Static Site Generation (SSG), vilket ger snabbare sid laddning och bättre prestanda.
+- Inbyggd stöd för routing och API-hantering.
+- Automatisk kodsplittring, vilket gör att den bara laddar den kod som behövs.
+- Bättre bildoptimering.
+
+Nackdelar:
+
+- Kan vara svårt att underhålla i riktigt stora projekt, som kräver stor datahantering. Då kan ytterligare hjälpmedel behövas för att säkerställa en smidig drift.
+- Dynamiska sidor kan öka serverbelastningen, om det finns jätte många sidor.
+- API Routes fungerar bra för mindre API:er, men det är inte optimerat för större backend applikationer.
+
 Vad menas med Routing? På vilket sätt löser NextJS Routing v.s "vanliga React"?
+
+Svar:
+Routing menas med navigering mellan olika sidor. Next.js är filbaserad när det kommer till routing. En mapp med en "page-fil" motsvarar en route. Man bygger som ett träd med olika filer/mappar.
+
 Vad menas med Reacts ekosystem? Nämn några viktiga bibliotek i Reacts ekosystem?
+
+Svar:
+Reacts ekosystem är en samling av bibliotek, verktyg och ramverk som är byggt ovanpå React.
+
+Några vanliga bibliotek är, Redux, React Router, Material UI, React Testing Library, Enzyme etc.
+
 Vad är syftet med useContext? Vilket problem med props löser den?
+
+Svar:
+Syftet med UseContext är att undvika något som kallas prop drilling, där props skickas genom flera komponenter för att dela data med varandra. UseContext hjälper till med att man slipper dela datan med alla komponenter i trädet, för att en komponent som är längre ned i trädet behöver den.
 
 -------Vecka 4....
 
 Vad är Redux Toolkit?
+
+Svar:
+Redux toolkit är ett kraftfullt och effektivt bibliotek som underlättar hanteringen av statet i applikationer som använder Redux.
+
 När, i vilka situationer vill man använda Redux Toolkit?
+
+Svar:
+Några situationer som man vill använda Redux toolkit är:
+
+- När man vill använda ett state används på flera olika ställen.
+- När man vill hämta data från ett API.
+- Om man vill ha ökad prestanda.
+- Minskar boilerplate-koden genom att tillåta skapandet av en enda fil som tar hand om en kombination av actions och reducers.

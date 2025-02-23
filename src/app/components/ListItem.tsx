@@ -52,9 +52,11 @@ export function RenderList({
             <span>Languages: </span>
             {languages.join(", ")}
           </p>
-          <p>
-            <span>Tools: </span> {tools.join(", ")}
-          </p>
+          {tools.length > 0 ? (
+            <p>
+              <span>Tools: </span> {tools.join(", ")}
+            </p>
+          ) : null}
         </div>
       </div>
       <div className="location-posted">
